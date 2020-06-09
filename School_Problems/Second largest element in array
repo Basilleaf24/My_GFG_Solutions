@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+void bubbleSort(int arr[], int n);
+void swap(int *xp, int *yp);
+
+void bubbleSort(int arr[], int n)
+{
+    int i, j;
+    for (i = 0; i < n-1; i++)
+
+    // Last i elements are already in place
+    for (j = 0; j < n-i-1; j++)
+        if (arr[j] > arr[j+1])
+            swap(&arr[j], &arr[j+1]);
+}
+
+void swap(int *xp, int *yp)
+{
+    int temp = *xp;
+    *xp = *yp;
+    *yp = temp;
+}
+int main() {
+	//code
+	int t, n, arr[10], i;
+	//arr[0]=0;
+	cin>>t;
+	while(t--)
+	{
+	    cin>>n;
+	    for(i=0; i<n; i++)
+	    {
+	        cin>>arr[i];
+	    }
+	    bubbleSort(arr, n);
+
+	    cout<<arr[n-2]<<endl;
+	}
+	return 0;
+}
