@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int t; 
+    cin>>t;
+    while(t--)
+    {
+    int n, k, i, j;
+    cin>>n>>k;
+    int A[n];
+    for(i=0; i<n; i++)
+    {
+        cin>>A[(i+n-k)%n];//for right rotation(clockwise)
+        //for left rotation(anti clockwise) use arr[(i+k)%n]
+    }
+    for(i=0; i<n; i++)
+    {
+        cout<<A[i]<<" ";
+    }
+    cout<<endl;
+    }
+ return 0;
+}
+
+/* 
+Alternative method using recursion
+reverse(a, a+k) Reverse array from beginning till k
+reverse(a+k, a+n) Reverse array from k till n
+reverse(a, a+n) Reverse the whole array
+*/
