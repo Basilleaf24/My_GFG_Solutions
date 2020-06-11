@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	//code
+	int t, num, i, arr[100], rev[100];
+	cin>>t;
+	while(t--)
+	{
+	    cin>>num;
+	    for(i=0; i<num; i++)
+	    cin>>arr[i];
+	    for(i=num-1; i>=0; i--)
+	    cout<<arr[i]<<" ";
+	    
+	    cout<<endl;
+	}
+	return 0;
+}
