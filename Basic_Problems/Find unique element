@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int t; cin>>t;
+	while(t--)
+	{
+	    int n,k;
+	    cin>>n>>k;
+	    int a[n],H[10001]={0};
+	    for(int i=0;i<n;i++)
+            cin>>a[i];
+	    for(int i=0;i<n;i++)
+	    {H[a[i]]++;}
+	    for(int i=0;i<10001;i++)
+	    {
+        if(H[i]==1)
+	    cout<<i<<endl;
+	    }
+	}
+	return 0;
+}
