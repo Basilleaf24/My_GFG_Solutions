@@ -1,0 +1,40 @@
+vector<int> SortBinaryArray(vector<int> binArray)
+{
+    // Your code goes here 
+    
+    vector<int>v;
+   for(int i=0;i<binArray.size();i++)
+   {if(binArray[i]==0) {v.push_back(binArray[i]);}}
+   
+   for(int i=0;i<binArray.size();i++)
+   {if(binArray[i]==1) {v.push_back(binArray[i]);}}
+   return v;
+}
+
+/* 
+
+Alternative method using 2 pointer approach 
+
+vector<int> SortBinaryArray(vector<int> binArray)
+{
+int i=0, j=binArray.size()-1, temp = 0;
+while(i < j){
+if (binArray[i] > binArray[j]){
+temp = binArray[i];
+binArray[i] = binArray[j];
+binArray[j] = temp;
+i++;
+j--;
+}
+else if (binArray[i] < binArray[j]){
+i++;
+j--;
+}
+else if (binArray[i] == binArray[j] && binArray[i] == 1) j--;
+else i++;
+
+}
+return binArray;
+}
+
+*/
