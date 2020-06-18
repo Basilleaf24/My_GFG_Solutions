@@ -1,0 +1,18 @@
+/*SUM OF DIGITS CONCEPT*/
+int convertFive(int n) 
+{
+    // Your code here
+    int num=0, rem, count=1;
+    while(n!=0)
+    {
+        rem=n%10;
+        
+        if(rem==0) num=num+count*5;
+        
+        else num = num + rem*count;
+        
+        count = count*10;
+        n=n/10;
+    }
+    return num;
+}
