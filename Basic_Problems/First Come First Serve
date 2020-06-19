@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--){
+	    int n,k,c=0;
+	    cin>>n>>k;
+	    int a[100000]{0};
+	    int val[n];
+	    for(int i=0;i<n;i++){
+	        cin>>val[i];
+	        a[val[i]]++;
+	    }
+	    for(int i=0;i<n;i++){
+			if(a[val[i]]==k){
+				cout<<val[i]<<endl;
+				c++;
+				break;
+			}
+	    }
+	    if(c==0){
+			cout<<-1<<endl;
+	    }
+	}
+	return 0;
+}
