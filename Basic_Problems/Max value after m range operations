@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n, m, a, b, k;
+	    int i;
+	    cin>>n>>m;
+	    int arr[n]={0};
+	    int max=arr[0];
+	    while(m--)
+	    {
+	        cin>>a>>b>>k;
+	        for(i=a; i<=b; i++)
+	           { arr[i]+=k;
+	            if(arr[i]>max)
+	                max=arr[i];
+	           }
+	        
+	    }
+      cout<<max<<endl;
+	}
+	return 0;
+}
