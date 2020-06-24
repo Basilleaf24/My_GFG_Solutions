@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+string find(int n);
+int main() {
+	//code
+	int t;
+	
+	cin>>t;
+	while(t--)
+	{
+	    int n;
+	    cin>>n;
+	    cout<<find(n)<<endl;
+	}
+	
+	return 0;
+}
+
+string find(int n)
+{
+string res="";
+
+do{
+switch((n%4))
+{
+case 0: res="7"+res;
+break;
+case 1: res="2"+res;
+break;
+case 2: res="3"+res;
+break;
+case 3: res="5"+res;
+break;
+
+}
+n--;
+n=n/4;
+}while(n>0);
+
+return res;
+
+}
