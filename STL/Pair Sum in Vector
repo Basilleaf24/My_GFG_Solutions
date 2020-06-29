@@ -1,0 +1,9 @@
+void sum(vector<pair<int,int>>v)
+{
+    long long sum=0;
+    //Your code here
+    for(auto& elm:v)
+        sum+=elm.second;
+    cout<<sum;
+    cout<<endl;
+}
