@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int i;
+	    char c[100];
+	    int count=0;
+	    cin>>c;
+	    for(i=0; c[i]!='\0'; i++)
+	    {
+	        if(c[i]>='A' && c[i]<='Z')
+	        count++;
+	    }
+	    cout<<count<<endl;
+	}
+	return 0;
+}
