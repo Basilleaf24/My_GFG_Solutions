@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    string s, s1, s2, s3;
+	    cin>>s;
+	    int i;
+	    for(i=0; i<s.length(); i++)
+	    {
+	        if((s.at(i)>=65&&s.at(i)<=90)||(s.at(i)>=97&&s.at(i)<=122))
+            s1+=s.at(i);
+            else if((s.at(i)>='0'&&s.at(i)<='9'))
+            s2+=s.at(i);
+            else
+            s3+=s.at(i);
+	    }
+	    cout<<s1<<endl<<s2<<endl<<s3<<endl;
+	    
+	}
+	return 0;
+}
