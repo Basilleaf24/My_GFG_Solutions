@@ -1,0 +1,24 @@
+/*USING SWAP*/
+#include <iostream>
+using namespace std;
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    string s=""; 
+	    char temp;
+	    cin>>s;
+	    int i, j;
+	    for(i=0, j=s.length()-1; i<j && s[i]!='\0'; i++, j--)
+	    {
+	        temp=s.at(i);
+	        s.at(i)=s.at(j);
+	        s.at(j)=temp;
+	    }
+	    cout<<s<<endl;
+	}
+	return 0;
+}
