@@ -1,0 +1,54 @@
+
+/*KMP ALGORITHM */
+void fillLPS(string str,int lps[])
+{
+    int n=str.size(),len=0;
+    lps[0]=0;
+    int i=1;
+    while(i<n)
+    {
+        if(str[i]==str[len])
+        {
+            len++;
+            lps[i]=len;
+            i++;
+        }
+        else
+        {
+            if(len==0)
+            {
+                lps[i]=0;i++;
+            }
+            else
+            len=lps[len-1];
+        }
+    }
+}
+int strstr(string s, string x)
+{
+     int n=s.size();
+     int m=x.size();
+     int lps[m];
+     fillLPS(x,lps);
+     int i=0,j=0;
+     while(i<n)
+     {
+         if(x[j]==s[i])
+         {
+             i++;
+             j++;
+         }
+         if(j==m)
+         {
+             return i-j;
+         }
+         else if(i<n&&x[j]!=s[i])
+         {
+             if(j==0)
+             i++;
+             else
+             j=lps[j-1];
+         }
+     }
+     return -1;
+}
