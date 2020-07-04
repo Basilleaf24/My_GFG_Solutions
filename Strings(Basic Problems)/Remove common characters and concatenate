@@ -1,0 +1,54 @@
+/*STL SET*/
+#include <iostream>
+using namespace std;
+#include <set>
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    string s1, s2, res;
+	    cin>>s1;
+	    cin>>s2;
+	    int i;
+	    set<char> s;
+	    for(i=0; i<s2.length(); i++)
+	    {
+	        s.insert(s2.at(i));
+	    }
+	    i=0;
+	    while(i<s1.size()){
+	        
+	        if(s.find(s1[i])==s.end())
+	         res+=s1[i];
+	         
+	        i++;
+	    }
+	    
+	    s.clear();
+	    
+	    // for string 2
+	    i=0;
+	    while(i<s1.size()){
+	        s.insert(s1[i]);
+	        i++;
+	    }
+	    
+	    i=0;
+	    while(i<s2.size()){
+	        
+	        if(s.find(s2[i])==s.end())
+	        res+=s2[i];
+	        
+	        i++;
+	    }
+	    
+	    if( res.size()==0)
+	    cout<<-1;
+	    else
+	    cout<<res;
+	    cout<<endl;
+	}
+	return 0;
+}
