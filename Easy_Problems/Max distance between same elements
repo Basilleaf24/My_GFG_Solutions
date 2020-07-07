@@ -1,0 +1,20 @@
+int maxDistance(int arr[], int n)
+{
+//Code here
+int i,j, ele, count=0, maxcount=0;
+for(i=0; i<n-1; i++)
+{
+    
+    for(j=i+1; j<n; j++)
+{
+    ele=arr[i];
+    if(arr[j]==ele)
+        count=j-i; //gives distance between first occurence and the present occurence of an element
+    if(count>maxcount)
+        maxcount=count;
+}
+}
+
+return maxcount;
+
+}
