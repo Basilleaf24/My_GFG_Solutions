@@ -1,0 +1,54 @@
+/*HASHING*/
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	     int shash[26]={0},chash[26]={0},no[10]={0};
+	    string s;
+	    cin>>s;
+	    int i;
+      for(i=0;i<s.length();i++)
+	    {
+	        if(s[i]>='a'  && s[i]<='z')
+	        {
+	              if(shash[s[i]-'a']==0)
+	              {
+	                  cout<<s[i];
+	                  shash[s[i]-'a']++;
+	              }
+	        }
+	       else if(s[i]>='A'  && s[i]<='Z')
+	        {
+	            if(chash[s[i]-'A']==0)
+	              {
+	                  cout<<s[i];
+	                  chash[s[i]-'A']++;
+	              }
+	        }
+	       if(s[i]>='0' && s[i]<='9')
+	       {
+	           if(no[s[i]-'0']==0)
+	              {
+	                  cout<<s[i];
+	                  no[s[i]-'0']++;
+	              }
+	       }
+	    }
+	    cout<<endl;
+   
+	}
+	return 0;
+}
+
+/*IF PROBLEM IS TO REMOVE ONLY CONSECUTIVE DUPLICATE CHARACTERS
+string s;
+sort(s.begin(), s.end());
+auto res=unique(s.begin(), s.end());
+cout<<string(s.begin(), res);
+*/
