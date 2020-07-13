@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    string s1, s2;
+	    cin>>s1;
+	    cin>>s2;
+	    if(s1.length()>s2.length())
+	    {
+	        cout<<s1.length()<<endl;
+	        cout<<s1+s2;
+	    }
+	    else
+	    {
+	        cout<<s2.length()<<endl;
+	        cout<<s1+s2;
+	    }
+	    cout<<endl;
+	}
+	return 0;
+}
