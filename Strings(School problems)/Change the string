@@ -13,12 +13,12 @@ int main() {
 	    
 	    if(s.at(0)>=65 && s.at(0)<=90)
 	    {
-	        transform(s.begin(), s.end(), s.begin(), ::toupper); 
+	        transform(s.begin(), s.end(), s.begin(), ::toupper); //toupper(u is small)
 	        cout<<s;
 	    }
 	    else
 	    {
-	        transform(s.begin(), s.end(), s.begin(), ::tolower); 
+	        transform(s.begin(), s.end(), s.begin(), ::tolower); //tolower(l is small)
 	        cout<<s;
 	    }
 	    
