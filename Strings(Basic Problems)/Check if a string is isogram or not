@@ -1,0 +1,23 @@
+/* ISOGRAMS ARE STRINGS IN WHICH LETTERS ARE NOT REPEATED */
+bool isIsogram(string s)
+{
+    //Your code here
+    int i, H[26]={0};
+    for(i=0; i<s.length(); i++)
+    {
+        
+        H[s.at(i)-97]++;
+       
+    }
+    for(i=0; i<26; i++)
+    {
+        
+        if(H[i]>1)
+        {
+            return false;
+        }
+       
+    }
+    
+    return true;
+}
