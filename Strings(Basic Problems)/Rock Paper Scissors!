@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    string s;
+	    cin>>s;
+	    if(s.at(0)==s.at(1))
+	        {
+	            cout<<"DRAW"<<endl;
+	        }
+	    else if(s.at(0)=='R')
+	    {
+	        cout<<((s.at(1)=='S')?'A':'B')<<endl;
+	    }
+	        
+	    else if(s.at(0)=='S')
+	    {
+	        cout<<((s.at(1)=='P')?'A':'B')<<endl;
+	    }
+	    
+	    else
+	    {
+	        cout<<((s.at(1)=='R')?'A':'B')<<endl;
+	       
+	    }
+	    
+	    
+	}
+	return 0;
+}
