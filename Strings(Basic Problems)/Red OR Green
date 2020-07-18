@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n;
+	    string s;
+	    cin>>n;
+	    cin>>s;
+	    int i, red=0, green=0;
+	    for(i=0; i<s.length(); i++)
+	    {
+	        if(s.at(i)=='R')
+	            red++;
+	        else
+	            green++;
+	    }
+	    cout<<((red<green)?red:green)<<endl;
+	    
+	}
+	return 0;
+}
