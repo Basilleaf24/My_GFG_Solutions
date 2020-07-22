@@ -1,0 +1,33 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    long long int a, b;
+	    cin>>a>>b;
+	    int r=0, res1=0, i=0, res2;
+	    while(a!=0)
+	    {
+	        r=a%10;
+	        res1=res1+r*pow(2,i);
+	        a=a/10;
+	        i++;
+	    }
+	    r=0, res2=0, i=0;
+	    while(b!=0)
+	    {
+	        r=b%10;
+	        res2=res2+r*pow(2,i);
+	        b=b/10;
+	        i++;
+	    }
+	    cout<<res1*res2<<endl;
+	    
+	}
+	return 0;
+}
