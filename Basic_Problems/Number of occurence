@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n, key, max=0;
+	    int H[100000]={0};
+	    cin>>n>>key;
+	    int arr[n], i;
+	    for(i=0; i<n; i++)
+	    {
+	        cin>>arr[i];
+	        H[arr[i]]++;
+	    }
+	    if(H[key]>0)
+	        cout<<H[key]<<endl;
+	    else
+	        cout<<-1<<endl;
+	        
+	}
+	return 0;
+}
