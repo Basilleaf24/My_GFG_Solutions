@@ -1,0 +1,17 @@
+int num(int a[], int n, int k)
+{
+     //add code here.
+     int i, count=0, rem;
+     for(i=0; i<n; i++)
+     {
+        while(a[i]!=0)
+        {
+            rem=a[i]%10;
+            a[i]=a[i]/10;
+            if(rem==k)
+                count++;
+        }
+         
+     }
+     return count;
+}
