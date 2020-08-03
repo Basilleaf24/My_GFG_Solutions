@@ -1,0 +1,40 @@
+multimap<int,int> multimapInsert(int arr[],int n)
+{
+    multimap<int,int>mp;
+   //Insert arr[i] as key and i as value in the multimap 
+    int i;
+    for(i=0; i<n; i++)
+        mp.insert(make_pair(arr[i], i));
+    
+    return mp;
+    
+}
+
+
+void multimapDisplay(multimap<int,int>mp)
+{
+    //Print the keys and value pairs in new line
+    for(auto elm:mp)
+    {
+        cout<<elm.first<<" "<<elm.second<<endl;
+    }
+
+}
+
+
+void multimapErase(multimap<int,int>&mp,int x)
+{
+   //If and else condition to erase x from the multimap
+
+   if(mp.count(x)!=0)   //  or if(mp.find(x)!=mp.end())
+   {
+       mp.erase(x);
+    cout<<"erased "<<x;
+   }
+    
+    else
+        cout<<"not found";
+    
+    
+    cout<<endl;
+}
