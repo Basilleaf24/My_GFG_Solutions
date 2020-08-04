@@ -13,7 +13,7 @@ bool subArrayExists(int arr[], int n)
      return false;  
 }
 
-/*ALTERNATIVE SOLN
+/*ALTERNATIVE SOLN 1
 bool subArrayExists(int arr[], int n)
 {
     //Your code here
@@ -26,6 +26,30 @@ bool subArrayExists(int arr[], int n)
             return true;
         else
             mp[sum]=true;
+    }
+    return false;
+}
+
+ALTERNATIVE SOLN 2
+bool subArrayExists(int arr[], int n)
+{
+    unordered_set<int>st;
+    int i,summ=0,j;
+    for(i=0;i<n;i++)
+    {
+        summ = summ + arr[i];
+        if(summ==0)
+        {
+            return true;
+        }
+        if(st.find(summ)!=st.end())
+        {
+            return true;
+        }
+        else
+        {
+            st.insert(summ);
+        }
     }
     return false;
 }
