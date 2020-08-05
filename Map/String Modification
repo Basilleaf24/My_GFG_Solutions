@@ -30,3 +30,44 @@ int main()
     }
 	return 0;
 }
+
+*/IF IWO CHARACTERS HAVE SAME FREQUENCY AND THEY DON'T HAVE TO BE SORTED IN ALPHABETICAL ORDER
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+ {
+    int t;
+    cin>>t;
+    string s;
+    while(t--)
+    {
+      map<char,int>m;
+      cin>>s;
+      for(int i=0;i<s.size();i++)
+      {
+          m[s[i]]++;
+      }
+      char f;
+      while(m.size())
+      {
+          int max=0;
+         for(auto it=m.begin();it!=m.end();it++)
+           {
+               if(it->second > max)
+               {
+                   f=it->first;
+                   max=it->second;
+               }
+           }
+          
+      m.erase(f);
+      cout<<f;
+     
+      }
+       cout<<endl;
+        
+    }
+	return 0;
+}
+*/
