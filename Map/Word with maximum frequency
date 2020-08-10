@@ -1,0 +1,35 @@
+#include <iostream>
+#include <bits/stdc++.h>
+#include <math.h>
+using namespace std;
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	cin.ignore();
+	while(t--)
+	{
+	    unordered_map<string,int>mp;
+	    string s;
+	    getline(cin,s); //GETLINE IS USED WHEN STRING HAS SPACES IN BETWEEN
+	    stringstream ss(s); //USE OF STRINGSTREAM
+	    string word,sol;
+	    vector<string>res;
+	    while(ss>>word){
+	         mp[word]++;
+	         res.push_back(word);
+	    }
+	    int max=0;
+	    for(int j=0;j<res.size();j++){
+	        if(mp[res[j]]>max){
+	            max=mp[res[j]];
+	            sol=res[j];
+	        }
+	    }
+	    
+	    cout<<sol<<" "<<max<<endl;
+	           
+	}
+	return 0;
+}
