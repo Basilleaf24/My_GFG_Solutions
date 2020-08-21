@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	//code
+	int t, n;
+	cin>>t;
+	while(t--)
+	{
+	cin>>n;
+	int i, j, arr[n][n], lsum=0, rsum=0, x=0;// X IS USED FOR CALCULATING SUM OF RIGHT DIAGONAL
+	for(i=0; i<n; i++)
+	{
+	    for(j=0; j<n; j++)
+	        cin>>arr[i][j];
+	}
+	for(i=0; i<n; i++){
+	    lsum+=arr[i][i];
+	}
+  for(i=n-1; i>=0; i--)
+	{
+	    rsum+=arr[x++][i];
+	}
+	cout<<abs(lsum-rsum)<<endl;
+	}
+	return 0;
+}
