@@ -1,0 +1,26 @@
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n, i, j;
+	    cin>>n;
+	    int arr[n*n];
+	    for(i=0; i<n*n; i++)
+	    {
+	        cin>>arr[i];
+	    }
+	    sort(arr, arr+n*n);
+      for(i=0; i<n*n; i++)
+	    {
+	        cout<<arr[i]<<" ";
+	    }
+	    cout<<endl;
+	}
+	return 0;
+}
