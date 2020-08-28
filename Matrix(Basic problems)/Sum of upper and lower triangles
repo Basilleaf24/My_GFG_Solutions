@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int i, j, n, lsum=0, rsum=0;
+	    cin>>n;
+	    int arr[n][n];
+	    for(i=0; i<n; i++)
+	    {
+	        for(j=0; j<n; j++)
+	            cin>>arr[i][j];
+	    }
+	    for(i=0; i<n; i++)
+	    {
+	        for(j=0; j<n; j++)
+	        {
+	            if(i<=j)
+	            lsum+=arr[i][j];
+	            if(i>=j)
+	            rsum+=arr[i][j];
+	        }
+	    }
+	    cout<<lsum<<" "<<rsum<<endl;
+	}
+	return 0;
+}
