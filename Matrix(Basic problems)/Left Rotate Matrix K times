@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	 while(t--){
+        int r,c,k;
+        cin>>r>>c>>k;
+        int a[r][c];
+        for(int i=0;i<r;i++){
+            for(int j=0;j<c;j++){
+                cin>>a[i][j];
+            }
+        }
+        while(k--){
+             for(int i=0;i<r;i++){
+                 int temp=a[i][0];//storing first ele of row in temp
+            for(int j=0;j<c-1;j++){
+                
+              a[i][j]=a[i][j+1];
+              
+            }
+            a[i][c-1]=temp;//exchanging values of first elm with last elm in row
+                 
+          }
+        }
+        for(int i=0;i<r;i++){
+            for(int j=0;j<c;j++){
+                cout<<a[i][j]<<" ";
+            }}
+        cout<<endl;
+    }
+	return 0;
+}
