@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+int maxposition(int *arr, int N)
+{
+    int i, max=0, p;
+    for(i=1; i<N; i+=2) //N is enough as 2*N is given in function call
+    {
+        if(arr[i]>max)
+        {
+            max=arr[i];
+            p=i;
+        }
+    }
+     return p;   
+}
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int nT, N;
+	    cin>>nT;
+	    cin>>N;
+	    int arr[2*N], i;
+	    for(i=0; i<2*N; i++)
+	        cin>>arr[i];
+	    int coins=0, p;
+	    while(nT!=0)
+	    {
+        p=maxposition(arr, 2*N);
+        if(nT-arr[p-1]>=0)
+        {
+        coins=coins+arr[p]*arr[p-1];
+            arr[p]=0;
+            nT=nT-arr[p-1];
+        }
+        else{
+            coins=coins+nT*arr[p];
+            nT=0;
+        }
+	    }
+	    	    cout<<coins<<endl;
+	}
+	return 0;
+}
