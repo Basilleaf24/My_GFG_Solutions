@@ -1,0 +1,22 @@
+int columnWithMaxZeros(int N){
+    
+    // Your code here
+    int i, j, count, maxcount=0, k;
+    for(i=0; i<N; i++)
+    {
+        count=0; //REINITIALIZE COUNT TO ZERO FOR EVERY COLUMN
+        for(j=0; j<N; j++)
+    {
+        
+        if(M[j][i]==0)
+            count++;
+        if(count>maxcount)
+        {
+            maxcount=count;
+            k=i;
+        }
+    }
+    }
+    
+    return k;
+}
