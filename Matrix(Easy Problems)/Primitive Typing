@@ -1,0 +1,55 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    string str;
+	    cin>>str;
+	 int i = 0; 
+    // start from character 'A' present at position (0, 0) 
+    int curX = 0, curY = 0, total=0; 
+    while (i < str.length()) 
+    { 
+    // find cordinates of next character 
+        int nextX = (str[i] - 'A') / 5; 
+        int nextY = (str[i] - 'B' + 1) % 5; 
+        
+        // Move Up if destination is above 
+        while (curX > nextX) 
+        { 
+            curX--; 
+            total++;
+        } 
+  
+        // Move Left if destination is to the left 
+        while (curY > nextY) 
+        { 
+            curY--; 
+            total++;
+        } 
+        // Move down if destination is below 
+        while (curX < nextX) 
+        { 
+            curX++; 
+            total++;
+        } 
+  
+        // Move Right if destination is to the right 
+        while (curY < nextY) 
+        { 
+            curY++; 
+            total++;
+        } 
+  
+        // At this point, destination is reached 
+        total++;
+        i++; 
+    }
+    cout<<total<<endl;
+	}
+	return 0;
+}
