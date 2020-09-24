@@ -1,0 +1,39 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    string s;
+	    cin>>s;
+	    int row, col;
+	    row=floor(sqrt(s.length()));
+	    col=ceil(sqrt(s.length()));
+	    int k=s.length();
+	   while(row <= col)  /*TO ENSURE A PROPER FIT FOR MATRIX
+        {
+            if(row*col < k)
+                row++;
+            else
+                break;
+        }
+        
+        for(int i = 0;i<col;i++)
+        {
+            int j = 0;
+            while(i + j < k)
+            {
+                cout << s[i + j];
+                j += col;
+            }
+            cout << " ";
+        }
+	    cout<<endl;
+	    
+	}
+	return 0;
+}
