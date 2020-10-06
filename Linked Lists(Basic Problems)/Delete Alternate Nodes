@@ -1,0 +1,14 @@
+void deleteAlt(struct Node *head){
+    // Code here
+    Node *p=head;
+    Node *q=p->next;
+    int i=1;
+    while(p!=NULL && q!=NULL)
+    {
+        p->next=q->next;//assigning address of next node of q to p so that next node's link is not lost
+        free(q);
+        p=p->next;
+        if(p!=NULL)
+        q=p->next;
+    }
+}
