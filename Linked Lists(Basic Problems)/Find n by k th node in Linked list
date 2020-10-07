@@ -1,0 +1,35 @@
+int fractional_node(struct Node *head, int k)
+{
+    // your code here
+    int count=0, find;
+    Node *temp=NULL;
+    temp=head;
+    while(temp->next!=NULL)
+    {
+        temp=temp->next;
+        count++;
+    }
+    find=ceil(count/k);
+    temp=head;
+    while(find--){
+        temp=temp->next;
+    }
+    return temp->data;
+}
+/*ALTERNATIVE/*
+int fractional_node(struct Node *head, int k)
+{
+Node* start = head;
+Node* slow = head;
+Node* fast = head;
+int cnt = 0;
+while(fast->next!=NULL)
+{
+  ++cnt;
+  if((cnt%k)==0)
+  slow=slow->next;
+
+  fast = fast->next;
+}
+return slow->data;
+}
