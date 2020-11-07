@@ -1,0 +1,31 @@
+int countLeaves(Node* root)
+{
+  // Your code here
+  int x, y;
+  if(root!=NULL)
+  {
+    x=countLeaves(root->left);
+    y=countLeaves(root->right);
+    if(root->left==NULL && root->right==NULL)
+        return x+y+1;
+    else
+        return x+y;
+  }
+  return 0;
+}
+
+
+OR
+
+int countLeaves(Node node)
+{
+if(node==null)
+return c;
+
+countLeaves(node.left);
+countLeaves(node.right);
+
+if(node.left==null && node.right==null)
+c++;
+return c;
+}
