@@ -1,0 +1,13 @@
+int minValue(Node* root)
+{
+    // Code here
+    Node *temp=root;
+    if(temp->left==NULL)
+        return temp->data;
+    while(temp->left!=NULL)
+    {
+        temp=temp->left;
+    }
+    return temp->data;
+    
+}
